@@ -1,0 +1,311 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #1e293b;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.total-box {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.total-box p {
+    color: #e0e7ff;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.total-box h2 {
+    font-size: 36px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+#expenseForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #334155;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #ffffff;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+#addExpenseBtn {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#addExpenseBtn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+#addExpenseBtn:active {
+    transform: scale(0.98);
+}
+
+.expense-section {
+    margin-top: 35px;
+}
+
+.expense-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+#expenseList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #ffffff;
+    transition: box-shadow 0.2s;
+}
+
+.expense-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.expense-info {
+    font-size: 14px;
+    color: #64748b;
+    overflow-wrap: anywhere;
+    min-width: 0;
+}
+
+.expense-amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    overflow-wrap: anywhere;
+}
+
+.delete-btn {
+    border: none;
+    cursor: pointer;
+    padding: 9px 14px;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #94a3b8;
+    padding: 25px 10px;
+    font-size: 14px;
+}
+
+/* =========================
+   6. TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+    body {
+        padding: 30px 16px;
+    }
+
+    .container {
+        max-width: 550px;
+        padding: 28px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .total-box h2 {
+        font-size: 32px;
+    }
+}
+
+/* =========================
+   7. MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 22px 16px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .total-box {
+        padding: 22px 15px;
+        margin-bottom: 25px;
+    }
+
+    .total-box h2 {
+        font-size: 30px;
+    }
+
+    #expenseForm {
+        gap: 16px;
+    }
+
+    .input-group input,
+    .input-group select {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #addExpenseBtn {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .expense-section {
+        margin-top: 28px;
+    }
+
+    .expense-section h2 {
+        font-size: 20px;
+    }
+
+    .expense-item {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .expense-info {
+        font-size: 13px;
+    }
+
+    .expense-amount {
+        font-size: 15px;
+    }
+
+    .delete-btn {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   8. EXTRA SMALL DEVICES
+========================= */
+
+@media (max-width: 350px) {
+    .container {
+        padding: 18px 12px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .expense-item {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .total-box h2 {
+        font-size: 26px;
+    }
+}
